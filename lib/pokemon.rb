@@ -28,7 +28,9 @@ class Pokemon
   end
 
   def alter_hp(hp, db)
-    p = db.execute("UPDATE pokemon SET hp = (?) WHERE name = 'Pickachu'", [(60 - hp)])
+    current_hp = db.execute("SELECT hp FROM pokemon WHERE pokemon.name = 'Pickachu'")
+    post_fight_hp = current_hp - hp
+    db.execute("UPDATE pokemon SET hp = (?) WHERE pokemon.name = 'Pickachu'", [post_fight_hp])
     binding.pry
   end
 end
