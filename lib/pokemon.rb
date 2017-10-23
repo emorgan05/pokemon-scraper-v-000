@@ -29,5 +29,6 @@ class Pokemon
 
   def alter_hp(hp, db)
     db.execute("UPDATE pokemon SET hp = (?) WHERE name = 'Pickachu'", [(60 - hp)])
+    binding.pry
   end
 end
