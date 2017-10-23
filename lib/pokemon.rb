@@ -26,4 +26,8 @@ class Pokemon
     p[:db] = db
     Pokemon.new(p)
   end
+
+  def alter_hp(hp, db)
+    db.execute("UPDATE pokemon SET hp = (?) WHERE name = 'Pickachu'", [hp])
+  end
 end
