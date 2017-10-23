@@ -1,5 +1,5 @@
 class Pokemon
-  attr_accessor :id, :name, :type, :db
+  attr_accessor :id, :name, :type, :hp, :db
 
   @@all = []
 
@@ -26,4 +26,3 @@ class Pokemon
     Pokemon.new(p)
   end
 end
-
