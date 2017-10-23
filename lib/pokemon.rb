@@ -22,6 +22,7 @@ class Pokemon
     p[:id] = array[0][0]
     p[:name] = array[0][1]
     p[:type] = array[0][2]
+    p[:hp] = array[0][3]
     p[:db] = db
     Pokemon.new(p)
   end
