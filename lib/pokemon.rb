@@ -7,6 +7,7 @@ class Pokemon
     @id = args[:id]
     @name = args[:name]
     @type = args[:type]
+    @hp = args[:hp]
     @db = args[:db]
     @@all << self
   end
